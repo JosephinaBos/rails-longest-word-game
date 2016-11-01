@@ -1,0 +1,14 @@
+<h1>WordGame#game</h1>
+<p>Find me in app/views/word_game/game.html.erb</p>
+
+<h3>Da Grid</h3>
+<%= @grid %>
+
+<form action="/score">
+  <label for="attempt">Enter your longest word</label>
+  <input type="text" id="attempt" name="attempt" placeholder="supercalifragelisticexpealidocious">
+    <input type="hidden" id="grid" name="grid" value="<%= @grid.join %>">
+    <input type="hidden" id="start_time" name="start_time" value="<%= @start_time %>">
+
+  <input type="submit" value="Play!">
+</form>
